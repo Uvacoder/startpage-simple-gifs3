@@ -1,12 +1,22 @@
-# Startpage
+# Elden Ring browser startpage
 
-[Live Preview](https://kencx.github.io/startpage/)
+[Live Preview](https://pav-osmolski.github.io/startpage/)
 
-Feel free to fork and make your own changes!
+Please feel free to fork and make your own changes!
 
-- Font: Fira Code
-- Colorscheme: Gruvbox Dark
-- Cat Gif: [Here](https://twitter.com/avogado6/status/1165595520967954432?s=19)
+List of changes:
 
-![startpage](startpage.gif)
+- Converted to CSS Flex
+- Fully responsive
+- Support for multiple right-containers, allowing more links
+- Added Date/Time with JS
+- Added fade-in on page load
+- Fixed HTML validation issues
+- Re-organised images into their own folder
+- Elden Ring theme (please excuse my obsession)
+- Fonts: Ubuntu and Bebas Neue
+- Colour scheme: Elden Ring, controlled by the `--hue-rotate` variable (the image is not affected)
+- Elden Ring gif: [Here](https://pinargokoglu.tumblr.com/post/675069910947364864/elden-ring)
+
+![startpage](startpage.jpg)
 
