@@ -12,10 +12,10 @@
     <div class="container">
         <div class="left-container">
     
-    <h1 id="Date"></h1>
+    <h1 id="Date">&nbsp;</h1>
 
-            <div class="gif">
-                <img title="pointless image" class='vapor' src="clouds.gif" />
+            <div class="gif border">
+                <img title="pointless image" src="media/eldenring/press-start.webp" />
             </div>
         </div>
 
@@ -129,6 +129,20 @@
             </div>
         </div>
     </div>
+	<script>
+		//Get date and time
+		const zeroFill = n => {
+			return ('0' + n).slice(-2);
+		}
+
+		const interval = setInterval(() => {
+			const now = new Date();
+
+			const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+			document.getElementById("Date").innerHTML = dateTime;
+		}, 100);
+	</script>
 </body>
 
 </html>
