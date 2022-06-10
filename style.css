@@ -86,7 +86,6 @@ html, body {
     max-width: 360px;
     aspect-ratio: 1/1;
     margin-left: 50px;
-	overflow: hidden;
     -webkit-user-select: none;
     user-select: none;
     pointer-events: none;
