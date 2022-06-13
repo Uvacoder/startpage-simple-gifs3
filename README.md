@@ -16,7 +16,8 @@ Please feel free to fork and make your own changes!
 - ELDEN RING theme (please excuse my obsession)
 - Fonts: Ubuntu and Bebas Neue
 - Colour scheme: ELDEN RING, mostly dictated by the `--hue-rotate` variable (the image is not affected)
-- You can tinker with the `style.css` variables in `:root` to your liking
+- Alternate theme styles are included in `style.css` under `/* Themes */`
+- Edit `index.html` to change the `<html>` element class for an alternative theme, or be creative and add your own
 - ELDEN RING gif: [Here](https://pinargokoglu.tumblr.com/post/675069910947364864/elden-ring)
 
 ## How to install:

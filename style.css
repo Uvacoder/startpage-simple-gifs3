@@ -2,27 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-:root {
-	--color-bg: #1E1E2E;
-	--color-fg: #D9E0EE;
-	--color-link: #8F9191;
-	--color-link-visited: #F5C2E7;
-	--color-link-hover: #FF79C6;
-	--color-link-title: #EADBB2;
-	--border-color: #D9E0EE;
+/* Themes */
+html.default {
+	--color-bg: #1e1e2e;
+	--color-fg: #d9e0ee;
+	--color-link: #8f9191;
+	--color-link-visited: #f5c2e7;
+	--color-link-hover: #ff79c6;
+	--color-link-title: #eadbb2;
+	--border-color: #d9e0ee;
 	--border-style: solid;
 	--border-radius: 12px;
+}
+
+html.vapor {
+	--border-color: #ff79c6;
+}
+
+html.eldenring-start {
 	--hue-rotate: -55deg;
-	--hue-rotate-revert: calc(var(--hue-rotate) / -1);
+	--image: hue-rotate(calc(var(--hue-rotate) / -1));
 	filter: hue-rotate(var(--hue-rotate));
 }
 
-body {
-	animation: fade-in ease 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
+html.eldenring-ranni {
+	--color-link-title: #eab2b2;
+	--hue-rotate: 5deg;
+	--saturate: 2.5;
+	--image: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+	filter: hue-rotate(var(--hue-rotate)) saturate(2);
 }
 
+html.eldenring-potboy {
+	--color-link-visited: #ffcccc;
+	--color-link-hover: #ff7979;
+	--color-link-title: #eab2b2;
+	--hue-rotate: -15deg;
+	--saturate: 2.5;
+	--image: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+	filter: hue-rotate(var(--hue-rotate)) saturate(2);
+}
+
+/* Body and Elements */
 html, body {
 	background: var(--color-bg);
 	color: var(--color-fg);
@@ -34,9 +55,15 @@ html, body {
 	padding: 0;
 }
 
+.fade-in {
+	animation: fade-in ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
 #Date {
 	font-family: "Bebas Neue";
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 40px;
 	min-width: 1px;
 	min-height: 52px;
@@ -135,7 +162,7 @@ html, body {
 }
 
 .gif img {
-	filter: hue-rotate(var(--hue-rotate-revert));
+	filter: var(--image);
 	display: block;
 	max-width: 100%;
 	max-height: 100%;
