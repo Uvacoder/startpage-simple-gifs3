@@ -16,30 +16,38 @@ html.default {
 }
 
 html.vapor {
+	--image-path: url(media/vapor/clouds.gif);
 	--border-color: #ff79c6;
 }
 
 html.eldenring-start {
+	--image-path: url(media/eldenring/press-start.webp);
 	--hue-rotate: -55deg;
-	--image: hue-rotate(calc(var(--hue-rotate) / -1));
+	--image-filter:
+	hue-rotate(calc(var(--hue-rotate) / -1));
 	filter: hue-rotate(var(--hue-rotate));
 }
 
 html.eldenring-ranni {
+	--image-path: url(media/eldenring/ranni-the-witch.webp);
+	--color-link: #9c97a0;
 	--color-link-title: #eab2b2;
 	--hue-rotate: 5deg;
 	--saturate: 2.5;
-	--image: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+	--image-filter:
+	hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
 	filter: hue-rotate(var(--hue-rotate)) saturate(2);
 }
 
 html.eldenring-potboy {
+	--image-path: url(media/eldenring/potboy.gif);
+	--color-link: #9c97a0;
 	--color-link-visited: #ffcccc;
 	--color-link-hover: #ff7979;
 	--color-link-title: #eab2b2;
 	--hue-rotate: -15deg;
 	--saturate: 2.5;
-	--image: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
 	filter: hue-rotate(var(--hue-rotate)) saturate(2);
 }
 
@@ -59,6 +67,15 @@ html, body {
 	animation: fade-in ease 1s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+}
+
+.blur {
+	filter: blur(4px);
+	transition: filter .25s ease-in-out;
+}
+
+.category:hover .blur {
+	filter: blur(0);
 }
 
 #Date {
@@ -116,7 +133,7 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	max-width: 360px;
-	aspect-ratio: 1/1;
+	width: 280px;
 	margin-left: 50px;
 	-webkit-user-select: none;
 	user-select: none;
@@ -161,11 +178,21 @@ html, body {
 	transition: color .25s ease-in-out;
 }
 
-.gif img {
-	filter: var(--image);
-	display: block;
-	max-width: 100%;
-	max-height: 100%;
+.image {
+	aspect-ratio: 1/1;
+}
+
+.image, .image a {
+	width: 100%;
+	height: 100%;
+}
+
+.image a {
+	filter: var(--image-filter);
+	display: flex;
+	background-image: var(--image-path);
+	background-size: cover;
+	background-position: center;
 }
 
 .head {
@@ -261,6 +288,7 @@ a:hover {
 	opacity: 1;
 }
 
+/* Keyframes */
 @keyframes blinking {
 	0% {
 		opacity: 1;

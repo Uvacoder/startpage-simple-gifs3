@@ -1,4 +1,4 @@
-# ELDEN RING browser startpage
+# ELDEN RING multi-theme browser startpage
 
 [Live Preview](https://pav-osmolski.github.io/startpage/)
 
@@ -13,11 +13,11 @@ Please feel free to fork and make your own changes!
 - Added fade-in on page load
 - Fixed HTML validation issues
 - Re-organised images into their own folder
-- ELDEN RING theme (please excuse my obsession)
-- Fonts: Ubuntu and Bebas Neue
-- Colour scheme: ELDEN RING, mostly dictated by the `--hue-rotate` variable (the image is not affected)
-- Alternate theme styles are included in `style.css` under `/* Themes */`
+- Alternate theme styles are included in `style.css` under `/* Themes */` with examples shown below
 - Edit `index.html` to change the `<html>` element class for an alternative theme, or be creative and add your own
+- Image is set via the `--image-path` variable
+- Fonts: Ubuntu and Bebas Neue
+- Colour scheme: ELDEN RING, mostly dictated by the `--hue-rotate` variable
 - ELDEN RING gif: [Here](https://pinargokoglu.tumblr.com/post/675069910947364864/elden-ring)
 
 ## How to install:
@@ -26,5 +26,20 @@ Please feel free to fork and make your own changes!
 2. Set your browser homepage to `file:///C:/StartPages/startpage/index.html`
 3. Customise to your delight
 
-![startpage](startpage.jpg)
+## Currently implemented theme classes:
 
+ELDEN RING Press Start `<html lang="en" class="default eldenring-start">`
+
+![startpage elden ring](screenshots/startpage-eldenring.jpg)
+
+ELDEN RING Lady Ranni `<html lang="en" class="default eldenring-ranni">`
+
+![startpage ranni the witch](screenshots/startpage-ranni.jpg)
+
+ELDEN RING Pot Boy `<html lang="en" class="default eldenring-potboy">`
+
+![startpage potboy](screenshots/startpage-potboy.jpg)
+
+Vapor by [nwvh](https://github.com/nwvh/startpage) `<html lang="en" class="default vapor">`
+
+![startpage vapor](screenshots/startpage-vapor.jpg)
