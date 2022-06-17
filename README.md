@@ -9,7 +9,7 @@ Please feel free to fork and make your own changes!
 - Converted to CSS Flex
 - Fully responsive
 - Support for multiple `bookmarks` containers, allowing more links
-- Added Date/Time with JS
+- Added Date/Time with JS async loader
 - Added fade-in on page load
 - Fixed HTML validation issues
 - Re-organised images into their own folder
@@ -32,13 +32,17 @@ ELDEN RING Press Start `<html lang="en" class="default eldenring-start">`
 
 ![startpage elden ring](screenshots/startpage-eldenring.jpg)
 
-ELDEN RING Lady Ranni `<html lang="en" class="default eldenring-ranni">`
+ELDEN RING Lady Ranni `<html lang="en" class="default eldenring-ranni">` and if you're feeling adventurous `<body class="fade-in ripples">`
 
 ![startpage ranni the witch](screenshots/startpage-ranni.jpg)
 
 ELDEN RING Pot Boy `<html lang="en" class="default eldenring-potboy">`
 
 ![startpage potboy](screenshots/startpage-potboy.jpg)
+
+ELDEN RING Ranni's Dark Moon `<html lang="en" class="default eldenring-ranni-dark-moon">` and for some extra magic `<body class="fade-in stars">`
+
+![startpage potboy](screenshots/startpage-ranni-dark-moon.jpg)
 
 Vapor by [nwvh](https://github.com/nwvh/startpage) `<html lang="en" class="default vapor">`
 

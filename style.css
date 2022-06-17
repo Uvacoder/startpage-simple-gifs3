@@ -16,27 +16,38 @@ html.default {
 }
 
 html.vapor {
-	--image-path: url(media/vapor/clouds.gif);
+	--image-path: url(../../media/vapor/clouds.gif);
 	--border-color: #ff79c6;
 }
 
 html.eldenring-start {
-	--image-path: url(media/eldenring/press-start.webp);
+	--image-path: url(../../media/eldenring/press-start.webp);
 	--hue-rotate: -55deg;
-	--image-filter:
-	hue-rotate(calc(var(--hue-rotate) / -1));
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1));
 	filter: hue-rotate(var(--hue-rotate));
 }
 
 html.eldenring-ranni {
-	--image-path: url(media/eldenring/ranni-the-witch.webp);
+	--image-path: url(../../../media/eldenring/ranni-the-witch.webp);
 	--color-link: #9c97a0;
 	--color-link-title: #eab2b2;
 	--hue-rotate: 5deg;
 	--saturate: 2.5;
-	--image-filter:
-	hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
 	filter: hue-rotate(var(--hue-rotate)) saturate(2);
+}
+
+html.eldenring-ranni-dark-moon {
+	@import url('../eldenring/ranni-dark-moon.css');
+	--image-path: url(media/eldenring/ranni-dark-moon.webp);
+	--color-fg: #bdbfc8;--color-link: #8b8a92;
+	--color-link-visited: #8b82ab;
+	--color-link-hover: #a260f5;
+	--color-link-title: #b7acef;
+	--hue-rotate: -16deg;
+	--saturate: 2.5;
+	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(0.9);
+	filter: hue-rotate(var(--hue-rotate)) saturate(2) contrast(1.2);
 }
 
 html.eldenring-potboy {
@@ -68,6 +79,13 @@ html, body {
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 }
+
+/*
+Privacy blur class that you can use on a per-container basis: e.g.
+<div class="links blur">
+
+This might be useful for those who stream their desktop.
+*/
 
 .blur {
 	filter: blur(4px);
@@ -179,7 +197,7 @@ html, body {
 }
 
 .image {
-	aspect-ratio: 1/1;
+	aspect-ratio: 3/4;
 }
 
 .image, .image a {

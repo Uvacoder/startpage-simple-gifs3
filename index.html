@@ -5,11 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>~/startpage</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body class="fade-in">
-	<div class="container">
+	<canvas id="canvas"></canvas>
+	<div id="startpage" class="container">
 		<div class="left-container">
 			<h1 id="Date">&nbsp;</h1>
 
@@ -128,20 +129,7 @@
 			<a href="https://github.com/Pav-Osmolski/startpage">pav-osmolski/startpage</a>
 		</div>
 		-->
-	<script>
-		//Get date and time
-		const zeroFill = n => {
-			return ('0' + n).slice(-2);
-		}
-
-		const interval = setInterval(() => {
-			const now = new Date();
-
-			const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
-
-			document.getElementById("Date").innerHTML = dateTime;
-		}, 100);
-	</script>
+	<script src="assets/js/loadjs.js"></script>
 </body>
 
 </html>
