@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
@@ -15,11 +15,15 @@ html.default {
 	--border-color: #d9e0ee;
 	--border-style: solid;
 	--border-radius: 12px;
+	--scrollbar-primary: #ff79c6;
+	--scrollbar-secondary: #101041;
 }
 
 html.vapor {
 	--image-path: url(../media/vapor/clouds.gif);
 	--border-color: #ff79c6;
+	--scrollbar-primary: #d93493;
+	--scrollbar-secondary: #1b1739;
 }
 
 html.eldenring-start {
@@ -27,6 +31,8 @@ html.eldenring-start {
 	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1));
 	filter: hue-rotate(var(--hue-rotate));
 	--hue-rotate: -55deg;
+	--scrollbar-primary: #17362b;
+	--scrollbar-secondary: #c97147;
 }
 
 html.eldenring-ranni {
@@ -36,6 +42,7 @@ html.eldenring-ranni {
 	--color-link-title: #eab2b2;
 	--hue-rotate: 5deg;
 	filter: hue-rotate(var(--hue-rotate)) saturate(2);
+	--scrollbar-primary: #db67aa;
 }
 
 html.eldenring-ranni-dark-moon {
@@ -50,6 +57,7 @@ html.eldenring-ranni-dark-moon {
 	--hue-rotate: -16deg;
 	--canvas-filter: brightness(0.7) contrast(0.84) hue-rotate(20deg) opacity(0.2);
 	filter: hue-rotate(var(--hue-rotate)) saturate(2) contrast(1.2);
+	--scrollbar-primary: #5e72fc;
 }
 
 html.eldenring-potboy {
@@ -61,6 +69,7 @@ html.eldenring-potboy {
 	--color-link-title: #eab2b2;
 	--hue-rotate: -15deg;
 	filter: hue-rotate(var(--hue-rotate)) saturate(2);
+	--scrollbar-primary: #da486a;
 }
 
 /* Body and Elements */
@@ -83,21 +92,6 @@ canvas {
 	left: 0;
 	z-index: -1;
 	object-fit: cover;
-}
-
-.fade-in {
-	animation: fade-in ease 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-
-.blur {
-	filter: blur(4px);
-	transition: filter .25s ease-in-out;
-}
-
-.category:hover .blur {
-	filter: blur(0);
 }
 
 #Date {
@@ -132,6 +126,7 @@ canvas {
 }
 
 .container {
+	background: var(--color-bg); /* Firefox 😔 */
 	display: flex;
 	flex-direction: row;
 	margin: 0 auto;
@@ -237,6 +232,11 @@ canvas {
 	flex-direction: column;
 	width: 25%;
 	flex: 1 1 auto;
+	align-items: center;
+}
+
+.category > .slick-start {
+	width: 180px;
 }
 
 @media only screen and (max-width: 1230px) {
@@ -269,6 +269,10 @@ canvas {
 	padding-bottom: 10px;
 }
 
+.links > ul:not(:first-child) {
+	display: none;
+}
+
 .title {
 	font-size: 20px;
 }
@@ -277,11 +281,12 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 li {
 	font-size: 16px;
-	padding: 5px
+	padding: 5px;
 }
 
 p {
@@ -311,9 +316,59 @@ a:hover {
 	color: var(--color-link-title);
 }
 
+/* Effects */
+.fade-in {
+	animation: fade-in ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.blur {
+	filter: blur(4px);
+	transition: filter .25s ease-in-out;
+}
+
+ul.blur:hover {
+	filter: blur(0);
+}
+
 .blinking {
 	animation: blinking 1s ease-in-out infinite;
 	opacity: 1;
+}
+
+/* Slick Buttons */
+.slick-single-arrow .slick-prev, .slick-single-arrow .slick-dots {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.slick-single-arrow .slick-next {
+	bottom: -18px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: unset;
+}
+
+/* Custom Scrollbar */
+html {
+	scrollbar-width: thin; /* Firefox 🥺 */
+	scrollbar-color: var(--scrollbar-primary) var(--scrollbar-secondary); /* Firefox 😭 */
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--color-fg);
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-image: linear-gradient(180deg, var(--scrollbar-primary) 0%, var(--scrollbar-secondary) 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* Keyframes */

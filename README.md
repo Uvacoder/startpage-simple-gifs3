@@ -7,9 +7,11 @@ Please feel free to fork and make your own changes!
 ## List of changes:
 
 - Converted to CSS Flex
-- Fully responsive
-- Support for multiple `bookmarks` containers, allowing more links
-- Added Date/Time with JS async loader
+- Fully responsive layout
+- Support for multiple `bookmarks` containers
+- Tabbed navigation for `links` containers using slick carousel
+- Asynchronous JavaScript loader
+- Both JS and CSS files can be instantiated based on element classes in DOM
 - Added fade-in on page load
 - Fixed HTML validation issues
 - Re-organised images into their own folder
@@ -19,6 +21,24 @@ Please feel free to fork and make your own changes!
 - Fonts: Ubuntu and Bebas Neue
 - Colour scheme: ELDEN RING, mostly dictated by the `--hue-rotate` variable
 - ELDEN RING gif: [Here](https://pinargokoglu.tumblr.com/post/675069910947364864/elden-ring)
+
+## Optional add-ons:
+These add-ons will only load when required, based on whether the relevant element class is detected in the DOM. You can configure the add-on list within `async-loader.js`.
+- [slick carousel](https://kenwheeler.github.io/slick/) `<div class="links slick-start">`
+- [jQuery Ripples](https://github.com/sirxemic/jquery.ripples) `<body class="fade-in ripples">`
+- [Date/Time](https://ricardometring.com/real-time-date-time-with-javascript) `<h1 id="#Date">`
+- Animating stars `<body class="fade-in stars">`
+- [jQuery](https://jquery.com/download/) `<body class="fade-in jquery">`
+
+## Features:
+
+Tabbed containers `<div class="links slick-start slick-single-arrow">`
+
+![tabbed navigation](screenshots/pav-startpage-navigation.png)
+
+Privacy blur/unblur on hover `<ul class="blur">`
+
+![privacy blur](screenshots/pav-startpage-privacy.png)
 
 ## How to install:
 
