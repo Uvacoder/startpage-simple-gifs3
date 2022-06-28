@@ -4,77 +4,124 @@
 
 /* Themes */
 html.default {
-	--image-path: url(../media/default/cat.gif);
-	--image-aspect-ratio: 1/1;
-	--color-bg: #1e1e2e;
-	--color-fg: #d9e0ee;
-	--color-link: #8f9191;
-	--color-link-visited: #f5c2e7;
-	--color-link-hover: #ff79c6;
-	--color-link-title: #eadbb2;
-	--border-color: #d9e0ee;
-	--border-style: solid;
-	--border-radius: 12px;
-	--scrollbar-primary: #ff79c6;
-	--scrollbar-secondary: #101041;
+
+--grid-width: 1280px;
+--background-position: center;
+--background-size: cover;
+--background-image: none;
+--background-opacity: .1;
+--background-filter: none;
+--image: url(../media/default/cat.gif);
+--image-aspect-ratio: 1/1;
+--image-filter: none;
+--color-bg: #1e1e2e;
+--color-fg: #d9e0ee;
+--color-link: #8f9191;
+--color-link-visited: #f5c2e7;
+--color-link-hover: #ff79c6;
+--color-link-title: #eadbb2;
+--border-color: #d9e0ee;
+--border-style: solid;
+--border-radius: 12px;
+--scrollbar-primary: #ff79c6;
+--scrollbar-secondary: #101041;
+
 }
 
 html.vapor {
-	--image-path: url(../media/vapor/clouds.gif);
-	--border-color: #ff79c6;
-	--scrollbar-primary: #d93493;
-	--scrollbar-secondary: #1b1739;
+
+--image: url(../media/vapor/clouds.gif);
+--border-color: #ff79c6;
+--scrollbar-primary: #d93493;
+--scrollbar-secondary: #1b1739;
+
 }
 
 html.eldenring-start {
-	--image-path: url(../media/eldenring/press-start.webp);
-	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1));
-	filter: hue-rotate(var(--hue-rotate));
-	--hue-rotate: -55deg;
-	--scrollbar-primary: #17362b;
-	--scrollbar-secondary: #c97147;
+
+--background-image: url(../media/eldenring/eldenring-bg.jpg);
+--background-filter: var(--image-filter);
+--image: url(../media/eldenring/press-start.webp);
+--image-filter: hue-rotate(calc(var(--hue-rotate) / -1));
+--hue-rotate: -55deg;
+--scrollbar-primary: #17362b;
+--scrollbar-secondary: #c97147;
+
+filter: hue-rotate(var(--hue-rotate));
+
 }
 
 html.eldenring-ranni {
-	--image-path: url(../media/eldenring/ranni-the-witch.webp);
-	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
-	--color-link: #9c97a0;
-	--color-link-title: #eab2b2;
-	--hue-rotate: 5deg;
-	filter: hue-rotate(var(--hue-rotate)) saturate(2);
-	--scrollbar-primary: #db67aa;
+
+--image: url(../media/eldenring/ranni-the-witch.webp);
+--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+--color-link: #9c97a0;
+--color-link-title: #eab2b2;
+--hue-rotate: 5deg;
+--scrollbar-primary: #db67aa;
+
+filter: hue-rotate(var(--hue-rotate)) saturate(2);
+
 }
 
 html.eldenring-ranni-dark-moon {
-	--image-path: url(../media/eldenring/ranni-dark-moon.webp);
-	--image-aspect-ratio: 3/4;
-	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(0.9);
-	--color-fg: #bdbfc8;
-	--color-link: #8b8a92;
-	--color-link-visited: #8b82ab;
-	--color-link-hover: #a260f5;
-	--color-link-title: #b7acef;
-	--hue-rotate: -16deg;
-	--canvas-filter: brightness(0.7) contrast(0.84) hue-rotate(20deg) opacity(0.2);
-	filter: hue-rotate(var(--hue-rotate)) saturate(2) contrast(1.2);
-	--scrollbar-primary: #5e72fc;
+
+--image: url(../media/eldenring/ranni-dark-moon.webp);
+--image-aspect-ratio: 3/4;
+--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(0.9);
+--color-fg: #bdbfc8;
+--color-link: #8b8a92;
+--color-link-visited: #8b82ab;
+--color-link-hover: #a260f5;
+--color-link-title: #b7acef;
+--hue-rotate: -16deg;
+--canvas-filter: brightness(0.7) contrast(0.84) hue-rotate(20deg) opacity(0.2);
+--scrollbar-primary: #5e72fc;
+
+filter: hue-rotate(var(--hue-rotate)) saturate(2) contrast(1.2);
+
 }
 
 html.eldenring-potboy {
-	--image-path: url(../media/eldenring/potboy.gif);
-	--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
-	--color-link: #9c97a0;
-	--color-link-visited: #ffcccc;
-	--color-link-hover: #ff7979;
-	--color-link-title: #eab2b2;
-	--hue-rotate: -15deg;
-	filter: hue-rotate(var(--hue-rotate)) saturate(2);
-	--scrollbar-primary: #da486a;
+
+--image: url(../media/eldenring/potboy.gif);
+--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(0.4) contrast(1.1);
+--color-link: #9c97a0;
+--color-link-visited: #ffcccc;
+--color-link-hover: #ff7979;
+--color-link-title: #eab2b2;
+--hue-rotate: -15deg;
+--scrollbar-primary: #da486a;
+
+filter: hue-rotate(var(--hue-rotate)) saturate(2);
+
+}
+
+html.halo {
+
+--background-position: 40% 100%;
+--background-image: url(../media/halo/halo-ring-bg.jpg);
+--background-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(1.3) contrast(0.8);
+--image: url(../media/halo/halo.gif);
+--image-aspect-ratio: 3/2;
+--image-filter: hue-rotate(calc(var(--hue-rotate) / -1)) saturate(1.1) contrast(0.9);
+--color-fg: #c1c3c9;
+--color-bg: #202020;
+--color-link: #9997a3;
+--color-link-visited: #a6a6a6;
+--color-link-hover: #a260f5;
+--color-link-title: #ac9bff;
+--hue-rotate: 10deg;
+--canvas-filter:brightness(0.6) contrast(0.9) hue-rotate(20deg) opacity(0.1);
+--scrollbar-primary: #74923e;
+
+filter: hue-rotate(var(--hue-rotate)) saturate(1) contrast(1.2);
+
 }
 
 /* Body and Elements */
 html, body {
-	background: var(--color-bg);
+	background-color: var(--color-bg);
 	color: var(--color-fg);
 	text-align: center;
 	font-family: "Ubuntu";
@@ -90,7 +137,7 @@ canvas {
 	width: 100%;
 	height: 100%;
 	left: 0;
-	z-index: -1;
+	z-index: 0;
 	object-fit: cover;
 }
 
@@ -126,15 +173,39 @@ canvas {
 }
 
 .container {
-	background: var(--color-bg); /* Firefox 😔 */
+	background-color: var(--color-bg);
 	display: flex;
+	min-height: 100%;
+	position: relative;
+	justify-content: center;
+}
+
+.container-inner {
+	display: flex;
+	width: 100%;
 	flex-direction: row;
 	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
 	align-items: center;
-	min-height: 100%;
-	max-width: 1280px;
+	max-width: var(--grid-width);
+}
+
+.container::before {
+	content: "";
+	background-image: var(--background-image);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	filter: var(--background-filter);
+	opacity: var(--background-opacity);
 }
 
 @media only screen and (max-width: 900px) {
@@ -213,9 +284,9 @@ canvas {
 .image a {
 	filter: var(--image-filter);
 	display: flex;
-	background-image: var(--image-path);
-	background-size: cover;
-	background-position: center;
+	background-image: var(--image);
+	background-size: var(--background-size);
+	background-position: var(--background-position);
 }
 
 .head {
