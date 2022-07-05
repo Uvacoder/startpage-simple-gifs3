@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-<body class="fade-in jquery">
+<body class="fade-in jquery search">
 	<div id="startpage" class="container">
 		<canvas id="canvas"></canvas>
 		<div class="container-inner">
@@ -24,8 +24,26 @@
 			</div>
 
 			<div class="right-container">
+				
 				<div class="head">
-				  <p>&gt; cd ~/<span class="blinking">_</span></p>
+					<p>&gt; cd ~/<span class="blinking">_</span></p>
+				</div>
+
+				<div class="head-search">
+					<!-- Search actions:
+						https://duckduckgo.org/
+						https://www.google.com/search
+					-->
+					<form method="get" action="https://www.google.com/search" autocomplete="off" id="search">
+						<p>
+							<span class="prefix">&gt; search ~/</span>
+							<input class="search-field" id="search-input" type="text"  type="text" name="q" maxlength="100" />
+							<!--
+							<textarea class="search-field" id="search-textarea" wrap="soft" type="text" name="q" maxlength="100"></textarea>
+							-->
+							<span class="blinking">_</span>
+						</p>
+					</form>
 				</div>
 
 				<div class="bookmarks">
@@ -104,8 +122,8 @@
 								<li class="title">music</li>
 								<li><a href="https://www.radiohead.com">radiohead</a></li>
 								<li><a href="https://www.filiposcar.com">filip oscar</a></li>
-								<li><a href="https://www.bandcamp.com">bandcamp</a></li>
-								<li><a href="https://www.soundcloud.com">soundcloud</a></li>
+								<li><a href="https://filiposcar.bandcamp.com/">bandcamp</a></li>
+								<li><a href="https://soundcloud.com/pawel-osmolski">soundcloud</a></li>
 							</ul>
 						</div>
 					</div>

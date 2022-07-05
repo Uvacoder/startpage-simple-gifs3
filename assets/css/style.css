@@ -169,6 +169,7 @@ canvas {
 	border-radius: var(--border-radius);
 	border-style: var(--border-style);
 	border-color: var(--border-color);
+	border-width: 1.5px;
 	overflow: hidden;
 }
 
@@ -177,7 +178,7 @@ canvas {
 	display: flex;
 	min-height: 100%;
 	position: relative;
-	justify-content: center;
+	justify-content: flex-end;
 }
 
 .container-inner {
@@ -289,13 +290,35 @@ canvas {
 	background-position: var(--background-position);
 }
 
-.head {
+.head, .head-search {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	font-size: 40px;
 	-webkit-user-select: none;
 	user-select: none;
+}
+
+body:not(.search) .head-search {
+	display: none;
+}
+body.search .head {
+	display: none;
+}
+@media only screen and (max-width: 900px) {
+	body.search .right-container {
+		margin-top:  127px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	body.search .right-container {
+		margin-top: 0;
+	}
+}
+@media only screen and (max-width: 800px) {
+	body.search .right-container {
+		transition: .25s margin ease-in-out;
+	}
 }
 
 .category {
@@ -406,6 +429,89 @@ ul.blur:hover {
 .blinking {
 	animation: blinking 1s ease-in-out infinite;
 	opacity: 1;
+	position: relative;
+	margin-left: 5px;
+	order: 0;
+}
+
+/* Search */
+body:not(.textarea) #search #search-textarea {
+	display: none;
+}
+body.search.textarea #search #search-input {
+	display: none;
+}
+#search {
+  display: flex;
+  position: relative;
+  margin: 0 auto 40px;
+  background: transparent;
+  width: 100%;
+  overflow: hidden;
+}
+
+#search p {
+	display: flex;
+	position: relative;
+	margin: 0 20px;
+	padding: 0;
+	width: 100%;
+}
+@media only screen and (min-width: 901px) {
+	#search p {
+		margin: 0 20%;
+	}
+}
+@media only screen and (max-width: 900px) {
+	#search {
+		margin: 30px 0 12px;
+	}
+}
+
+#search .search-field {
+	background: none;
+	border: none;
+	color: var(--color-fg);
+	font-family: 'Ubuntu';
+	font-size: 40px;
+	line-height: 46px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	order: 1;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#search input[type=text] {
+	position: relative;
+	height: 46px;
+	left: -20px;
+	text-indent: 1px;
+}
+
+#search textarea {
+	width: 100%;
+	height: calc(46px * 2 + 5px);
+	position: absolute;
+	left: 0;
+	top: 0;
+	resize: none;
+	text-indent: 198px;
+}
+
+#search p > span.prefix {
+	flex: 0 0 auto;
+}
+
+input[type=text]:focus ~ span.blinking,
+textarea:focus ~ span.blinking {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.search:focus {
+  outline: none;
 }
 
 /* Slick Buttons */

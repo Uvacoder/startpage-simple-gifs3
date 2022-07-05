@@ -9,6 +9,7 @@ Please feel free to fork and make your own changes!
 - Converted to CSS Flex
 - Fully responsive layout
 - Support for multiple `bookmarks` containers
+- Added search functionality
 - Tabbed navigation for `links` containers using slick carousel
 - Asynchronous JavaScript loader
 - Both JS and CSS files can be instantiated based on element classes in DOM
@@ -23,14 +24,19 @@ Please feel free to fork and make your own changes!
 - ELDEN RING gif: [Here](https://pinargokoglu.tumblr.com/post/675069910947364864/elden-ring)
 
 ## Optional add-ons:
-These add-ons will only load when required, based on whether the relevant element class is detected in the DOM. You can configure the add-on list within `async-loader.js`.
+These add-ons will only load when required, based on whether the relevant element class is detected in the DOM. You can configure the JavaScript add-on list within `async-loader.js`.
 - [slick carousel](https://kenwheeler.github.io/slick/) `<div class="links slick-start">`
 - [jQuery Ripples](https://github.com/sirxemic/jquery.ripples) `<body class="fade-in ripples">`
 - [Date/Time](https://ricardometring.com/real-time-date-time-with-javascript) `<h1 id="#Date">`
 - Animating stars `<body class="fade-in stars">`
+- Search `<body class="fade-in search">`
 - [jQuery](https://jquery.com/download/) `<body class="fade-in jquery">`
 
 ## Features:
+
+Search functionality `<body class="fade-in search">`. The default is set to Google. You can change the search engine by modifying `action="https://www.google.com/search"`
+
+![search functionality](screenshots/pav-startpage-search.png)
 
 Tabbed containers `<div class="links slick-start slick-single-arrow">`
 

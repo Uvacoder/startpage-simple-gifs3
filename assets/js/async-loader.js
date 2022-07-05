@@ -28,6 +28,10 @@ Vanilla JS scripts.
 	if (document.getElementById("Date") !== null) {
 		loadJS("assets/js/datetime.js", true);
 	}
+	// Search
+	if (document.querySelector(".textarea") !== null) {
+		loadJS("assets/js/search.js", true);
+	}
 	// Stars
 	if (document.querySelector(".stars") !== null) {
 		loadJS("assets/js/stars.js", true);
